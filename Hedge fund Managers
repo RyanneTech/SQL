@@ -1,0 +1,53 @@
+--create table about hedge fund managers
+CREATE TABLE Manager (id INTEGER PRIMARY KEY AUTOINCREMENT, Fullname TEXT, Age INTEGER);
+
+INSERT INTO manager (fullname, age) VALUES ("Ken Griffin", 54);
+INSERT INTO manager (fullname, age) VALUES ("Jim Simons", 84);
+INSERT INTO manager (fullname, age) VALUES ("Ray Dalio", 73);
+INSERT INTO manager (fullname, age) VALUES ("David Shaw", 72);
+INSERT INTO manager (fullname, age) VALUES ("Israel Englander", 75);
+INSERT INTO manager (fullname, age) VALUES ("Carl Icahn", 87);
+INSERT INTO manager (fullname, age) VALUES ("Chase Coleman", 47);
+INSERT INTO manager (fullname, age) VALUES ("Paul Singer", 78);
+INSERT INTO manager (fullname, age) VALUES ("Bruce Kovner", 78);
+INSERT INTO manager (fullname, age) VALUES ("Stanley Druckenmiller", 69);
+
+
+--create table with networth and company name
+CREATE table Wealth (id INTEGER PRIMARY KEY AUTOINCREMENT, billionare_id INTEGER, net_worth TEXT,source_wealth TEXT);
+
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (1, "35 billion", "Citadel LLC");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (2, "28.1 billion", "Renaissance Technologies");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (3, "19.1 billion", "Bridgewater Associates");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (4, "7.9 billion", "D.E. Shaw & Co.");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (5, "11.5 billion", "Millennium Management");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (6, "17.5 billion", "Icahn Enterprises");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (7, "8.5 billion", "Tiger Global Management");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (8, "5.5 billion", "Elliot Management");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (9, "6.6 billion", "CAM Capital");
+INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (10, "6.4 billion", "Duquesne Capital");
+
+
+--total networth for each hedge fund manager
+SELECT manager.fullname, wealth.net_worth
+FROM manager
+JOIN wealth
+ON manager.id=wealth.billionare_id;
+
+
+--company of each headge fund manager
+SELECT manager.fullname, wealth.source_wealth
+FROM manager
+JOIN wealth
+ON manager.id=wealth.billionare_id;
+
+
+--hedgefund managers 60 years old or younger
+SELECT manager.fullname, wealth.net_worth, wealth.source_wealth
+FROM manager
+JOIN wealth
+ON manager.id=wealth.id
+GROUP BY age
+HAVING age <= 60;
+
+
