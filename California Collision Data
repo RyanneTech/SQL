@@ -1,4 +1,4 @@
----For each day of the year in 2009, how many bicyclists were severly injured or complained 
+---What days of the year in 2009, where their three or more bicyclists who got severly injured or complained 
 about pain after being a victim in a accident at dawn and dawn?---
 
 SELECT collision_date, COUNT(victim_role) AS bicyclist FROM parties
@@ -11,4 +11,5 @@ AND victim_role IN ('bicyclist')
 AND lighting IN ('dusk or dawn')
 AND victim_degree_of_injury IN ('complaint of pain', 'severe injury')
 GROUP BY collision_date
+HAVING COUNT(victim_role) > 3
 ORDER BY collision_date ASC;
