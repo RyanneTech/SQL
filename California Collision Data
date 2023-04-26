@@ -1,0 +1,14 @@
+---For each day of the year in 2009, how many bicyclists were severly injured or complained 
+about pain after being a victim in a accident at dawn and dawn?---
+
+SELECT collision_date, COUNT(victim_role) AS bicyclist FROM parties
+INNER JOIN victims
+ON parties.case_id = victims.case_id
+INNER JOIN collisions
+ON collisions.case_id = victims.case_id
+WHERE collision_date BETWEEN ('2009-01-01') AND ('2009-12-31')
+AND victim_role IN ('bicyclist')
+AND lighting IN ('dusk or dawn')
+AND victim_degree_of_injury IN ('complaint of pain', 'severe injury')
+GROUP BY collision_date
+ORDER BY collision_date ASC;
