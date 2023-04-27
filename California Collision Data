@@ -22,3 +22,12 @@ ON collisions.case_id = parties.case_id
 WHERE party_sex IS NOT null AND party_sex != 'X'
 AND county_location IN ('los angeles')
 GROUP BY party_sex
+
+
+
+---How many fatal collisions occured from speeding on the highway?---
+
+SELECT COUNT(location_type) AS highway_collisions FROM collisions
+WHERE location_type IN ('highway')
+AND collision_severity IN ('fatal')
+AND pcf_violation_category IN ('speeding')
