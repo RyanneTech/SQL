@@ -16,7 +16,6 @@ HAVING COUNT(victim_role) > 3
 ORDER BY collision_date ASC;
 
 
-
 ---How many collisions were caused by male and female parties under the influence in Los Angeles County?  
 
 SELECT party_sex, COUNT(alcohol_involved) AS alcohol_involved FROM collisions
@@ -25,7 +24,6 @@ ON collisions.case_id = parties.case_id
 WHERE party_sex IS NOT null AND party_sex != 'X'
 AND county_location IN ('los angeles')
 GROUP BY party_sex
-
 
 
 ---How many fatal collisions occured from speeding on the highway?
