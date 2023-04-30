@@ -1,4 +1,7 @@
---create a Blockbuster store database
+#In this SQL, I created my own Blockbuster store
+
+
+--Create a Blockbuster store database
 
 CREATE TABLE store (id INTEGER PRIMARY KEY, Name TEXT, Genre TEXT, Rated TEXT, Price INTEGER, Rating INTEGER);
 
@@ -18,11 +21,13 @@ INSERT INTO store VALUES (13, "Luck", "Animation", "PG", 2.49, 48);
 INSERT INTO store VALUES (14, "Triangle of Sadness", "Comedy", "Rated-R", 2.19, 71);
 INSERT INTO store VALUES (15, "Black Panther: Wakanda Forever", "Action", "PG-13", 2.90, 84);
 
---display the database ordered by price.
+
+--Display the database ordered by price.
 SELECT * FROM Store
 ORDER BY price desc;
 
---what is the avg price of movies in the action and animation genre? 
+
+--What is the avg price of movies in the action and animation genre? 
 SELECT AVG(price) "Avg Action Movie Price"
 FROM store
 WHERE genre='Action';
@@ -31,7 +36,8 @@ SELECT AVG(price) "Avg Animated Movie Price"
 FROM store
 WHERE genre='Animation';
 
---what are the top 6 rated movies? 
+
+--What are the top 6 rated movies? 
 SELECT name, genre, rating
 FROM store
 ORDER BY rating desc
