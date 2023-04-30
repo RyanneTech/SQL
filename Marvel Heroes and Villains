@@ -48,17 +48,15 @@ INSERT INTO marvels VALUES(25, "Juggernaut", 76, "Neutral", "Male", 2.87, 862, "
 INSERT INTO marvels VALUES(26, "Professor X", 58, "Good", "Male", 1.83, 86, "EUA", 5, 2, 2, 2, 5, 3);
 
 
---limit table to 10
-SELECT * FROM marvels LIMIT 10;
+---What superheroes/villains has max strength and decent speed?
 
-
---what superheroes/villains has max strength and decent speed
 SELECT * FROM marvels
 WHERE strength >= 7
 AND speed >3;
 
 
---which superheroes/villains has a popularity rating higher than 20
+---Which superheroes/villains has a popularity rating higher than 20?
+
 SELECT name, popularity, alignment, intelligence
 FROM marvels
 GROUP BY name
@@ -66,7 +64,8 @@ HAVING popularity > 20
 ORDER BY popularity desc;
 
 
---list the name of superheroes/villains with a declaration of their fighting approach
+---List the name of superheroes/villains with a declaration of their fighting approach
+
 SELECT name, intelligence, fighting_skills,
     CASE
         WHEN intelligence > 5 AND fighting_skills > 5 THEN "Precise"
@@ -76,7 +75,8 @@ FROM marvels
 WHERE approach IS NOT NULL;
 
 
---which superheroes/villains has a height over 1.90
+---Which superheroes/villains has a height over 1.90?
+
 SELECT name, height_m, weight_kg
 FROM marvels
 GROUP BY name
