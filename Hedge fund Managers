@@ -1,4 +1,5 @@
---create table about hedge fund managers
+---Create table about hedge fund managers
+
 CREATE TABLE Manager (id INTEGER PRIMARY KEY AUTOINCREMENT, Fullname TEXT, Age INTEGER);
 
 INSERT INTO manager (fullname, age) VALUES ("Ken Griffin", 54);
@@ -13,7 +14,7 @@ INSERT INTO manager (fullname, age) VALUES ("Bruce Kovner", 78);
 INSERT INTO manager (fullname, age) VALUES ("Stanley Druckenmiller", 69);
 
 
---create table with networth and company name
+---Create table with networth and company name
 CREATE table Wealth (id INTEGER PRIMARY KEY AUTOINCREMENT, billionare_id INTEGER, net_worth TEXT,source_wealth TEXT);
 
 INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (1, "35 billion", "Citadel LLC");
@@ -28,21 +29,21 @@ INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (9, "6.6 bil
 INSERT INTO wealth (billionare_id, net_worth, source_wealth) VALUES (10, "6.4 billion", "Duquesne Capital");
 
 
---total networth for each hedge fund manager
+---Total networth for each hedge fund manager
 SELECT manager.fullname, wealth.net_worth
 FROM manager
 JOIN wealth
 ON manager.id=wealth.billionare_id;
 
 
---company of each headge fund manager
+---Company of each headge fund manager
 SELECT manager.fullname, wealth.source_wealth
 FROM manager
 JOIN wealth
 ON manager.id=wealth.billionare_id;
 
 
---hedgefund managers 60 years old or younger
+---Hedgefund managers 60 years old or younger
 SELECT manager.fullname, wealth.net_worth, wealth.source_wealth
 FROM manager
 JOIN wealth
