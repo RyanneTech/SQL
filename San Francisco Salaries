@@ -23,3 +23,5 @@ SELECT JobTitle, ROUND(AVG(BasePay),2) AS BasePay, OvertimePay, OtherPay, ROUND(
 WHERE JobTitle LIKE "%fire department%"
 GROUP BY JobTitle
 ORDER BY BasePay ASC;
+
+
