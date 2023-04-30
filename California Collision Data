@@ -1,5 +1,8 @@
----What days in the year of 2009 where there more than three bicyclists who coomplained about pain or 
-got severly injured after being a victim in a accident at dusk or dawn?---
+#In this SQL, I'm querying a database from the California Highway Patrol that covers collisions from January 1st, 2001 until mid-December, 2020.
+
+
+---What days in the year 2009 were there more than three bicyclists who complained about pain or 
+got severely injured after being a victim in an accident at dusk or dawn?
 
 SELECT collision_date, COUNT(victim_role) AS bicyclist FROM parties
 INNER JOIN victims ON parties.case_id = victims.case_id
@@ -14,7 +17,7 @@ ORDER BY collision_date ASC;
 
 
 
----How many collisions where caused by male and female parties under the influence in Los Angeles County?---  
+---How many collisions were caused by male and female parties under the influence in Los Angeles County?  
 
 SELECT party_sex, COUNT(alcohol_involved) AS alcohol_involved FROM collisions
 JOIN parties
@@ -25,9 +28,11 @@ GROUP BY party_sex
 
 
 
----How many fatal collisions occured from speeding on the highway?---
+---How many fatal collisions occured from speeding on the highway?
 
 SELECT COUNT(location_type) AS highway_collisions FROM collisions
 WHERE location_type IN ('highway')
 AND collision_severity IN ('fatal')
 AND pcf_violation_category IN ('speeding')
+
+
