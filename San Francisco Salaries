@@ -1,5 +1,7 @@
----What were the top 5 jobtitles with the highest paying basepay?
+#In this SQL, I'm querying a database that gathered the salaries from San Francisco government jobs.
 
+
+---What were the top 5 jobtitles with the highest paying basepay?
 
 SELECT EmployeeName, JobTitle, BasePay FROM Salaries
 WHERE BasePay !="" 
@@ -8,10 +10,13 @@ Order BY BasePay DESC
 Limit 5;
 
 
+
 --Who were the top 10 employees that earned the highest pay, including overtimepay?
+
 SELECT EmployeeName, JobTitle, TotalPay FROM Salaries
 ORDER BY TotalPay DESC
 LIMIT 10;
+
 
 
 --What is the average base pay and total pay (includes overtime and otherpay) for all the job titles in the San Franciso Fire Department, ?
