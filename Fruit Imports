@@ -1,0 +1,10 @@
+-- Create fruits import list 
+CREATE TABLE fruit_imports
+(
+	id integer,
+	name varchar(20),
+	season varchar(10),
+	state varchar(20),
+	supply integer,
+	cost_per_unit decimal
+);
