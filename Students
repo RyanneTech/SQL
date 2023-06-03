@@ -1,4 +1,4 @@
-create table students
+-- Create a enrollment list 
 (
 	student_no integer,
 	student_name varchar(20),
@@ -15,3 +15,10 @@ insert into students values (7, 'Michael', 19);
 insert into students values (8, 'Jack', 19);
 insert into students values (9, 'Rand', 17);
 insert into students values (10, 'Sylvia', 20);
+
+-- Display the students that contain the letters "ch" in their name or thier name ends with the letters "nd".
+SELECT DISTINCT(student_name), age From students 
+WHERE student_name like '%ch%'
+OR student_name like '%nd';
+
+
