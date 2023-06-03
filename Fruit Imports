@@ -23,4 +23,14 @@ insert into fruit_imports values(14, 'Pear', 'Fall', 'Nebraska', 30500, 0.12);
 insert into fruit_imports values(15, 'Grape', 'Fall', 'Illinois', 72500, 0.35);
 
 -- Categorize the fruit and it's total supply 
+SELECT name, total_supply,
+CASE 
+	WHEN total_supply < 20000 THEN 'Low supply'
+	WHEN total_supply >= 20000 AND total_supply <= 50000 THEN 'Sufficient Supply'
+	WHEN total_supply > 50000 THEN 'Full supply'
+END as category
+FROM (SELECT name, sum(supply) total_supply FROM fruit_imports
+GROUP BY name) a
+
+
 
