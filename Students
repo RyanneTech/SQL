@@ -21,4 +21,9 @@ SELECT student_name, age From students
 WHERE student_name like '%ch%'
 OR student_name like '%nd';
 
+-- Display students that have "o" or "ph" in their name and are not 19.
+SELECT student_name, age From students 
+WHERE (student_name like '%o%' OR student_name like '%ph%')
+AND age != 19;
+
 
