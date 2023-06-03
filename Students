@@ -26,4 +26,10 @@ SELECT student_name, age From students
 WHERE (student_name like '%o%' OR student_name like '%ph%')
 AND age != 19;
 
+-- Display students that are not older than 20 and their student_no is either between 3 and 5 or their student_no is 7. 
+   Additionally, display students that are older than 20, but have a student_no of at least 4.
+SELECT * FROM students
+WHERE age <= 20
+AND (student_no BETWEEN 3 AND 5 OR student_no = 7)
+OR (age > 20 AND student_no >= 4);
 
