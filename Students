@@ -1,9 +1,5 @@
 -- Create a enrollment list 
-(
-	student_no integer,
-	student_name varchar(20),
-	age integer
-);
+(student_no integer, student_name varchar(20), age integer);
 
 insert into students values (1, 'Michael', 19);
 insert into students values (2, 'Doug', 18);
