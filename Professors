@@ -24,3 +24,5 @@ FROM professors
 -- Display the department each professor works in
 SELECT last_name, UPPER(SUBSTRING(department,1,3)) department, salary, hire_date
 FROM professors
+
+
