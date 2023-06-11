@@ -26,3 +26,7 @@ SELECT last_name, UPPER(SUBSTRING(department,1,3)) department, salary, hire_date
 FROM professors
 
 
+-- Display the highest and lowest salaries, excluding Professor Williams
+SELECT MAX(salary) highest_salary, MIN(salary) lowest_salary FROM professors
+WHERE last_name !='Williams'
+
