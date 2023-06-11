@@ -124,7 +124,15 @@ insert into employees values (58, 'King', 'Sangra', null, '2012-01-08', 'Grocery
 insert into employees values (59, 'Hilario', 'Reily', 'hreily1m@google.co.jp', '2012-03-18', 'Phones & Tablets', 'M', 83332, 5);
 
 
--- 
+-- Display all the email domains
+SELECT SUBSTRING(email, position('@' IN email)+1) email_domain, COUNT(*) 
+FROM employees
+WHERE email IS NOT NULL
+GROUP BY SUBSTRING(email, position('@' IN email)+1)
+ORDER BY COUNT(*) desc
+
+
+
 
 
 
