@@ -132,6 +132,10 @@ GROUP BY SUBSTRING(email, position('@' IN email)+1)
 ORDER BY COUNT(*) desc
 
 
+-- Display all the employees in the Electronics division
+SELECT * FROM employees
+WHERE department 
+	IN (SELECT department FROM departments WHERE division = 'Electronics')
 
 
 
