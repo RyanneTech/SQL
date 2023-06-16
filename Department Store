@@ -136,7 +136,10 @@ ORDER BY COUNT(*) desc
 SELECT * FROM employees
 WHERE salary > 130000
 AND region_id IN (SELECT region_id FROM regions
-		    WHERE country = 'Canada' OR country = 'United States')
+		    WHERE country IN ('Canada','United States'))
+					
+
+
 
 
 
