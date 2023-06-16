@@ -132,25 +132,18 @@ GROUP BY SUBSTRING(email, position('@' IN email)+1)
 ORDER BY COUNT(*) desc;
 
 
--- Display all the employees in Canada or the United States with a salary greater than $130,000
-SELECT * FROM employees
-WHERE salary > 130000
-AND region_id IN (SELECT region_id FROM regions
-		    WHERE country IN ('Canada','United States'));
-					
-
--- Display all the employees that work in any kids division and hired after all the employees in the maintenance department
-SELECT * FROM employees
-WHERE department = ANY (SELECT department FROM departments 
-			   WHERE division = 'Kids')
-AND hire_date > ALL (SELECT hire_date FROM employees 
-			WHERE department = 'Maintenance');
+-- Display the employees who were hired first and last within the company 
+SELECT first_name, department, hire_date, country FROM employees e 
+JOIN regions r
+ON e.region_id = r.region_id
+WHERE hire_date = (SELECT MIN(hire_date) FROM employees e2)
+UNION
+SELECT first_name, department, hire_date, country FROM employees e 
+JOIN regions r
+ON e.region_id = r.region_id
+WHERE hire_date = (SELECT MAX(hire_date) FROM employees e2)
 
 
--- Display the departments from the employees table that are not listed in the departments table
-SELECT DISTINCT department FROM employees
-EXCEPT 
-SELECT department FROM departments
 
 
 
