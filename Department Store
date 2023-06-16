@@ -132,10 +132,11 @@ GROUP BY SUBSTRING(email, position('@' IN email)+1)
 ORDER BY COUNT(*) desc
 
 
--- Display all the employees in the Electronics division
+-- Display all the employees in Canada or the United States with a salary greater than $130,000
 SELECT * FROM employees
-WHERE department 
-	IN (SELECT department FROM departments WHERE division = 'Electronics')
+WHERE salary > 130000
+AND region_id IN (SELECT region_id FROM regions
+		    WHERE country = 'Canada' OR country = 'United States')
 
 
 
