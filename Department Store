@@ -145,7 +145,10 @@ WHERE hire_date = (SELECT MAX(hire_date) FROM employees e2)
 ORDER BY hire_date
 
 
-
+-- Rank the employees based on their salary in each department
+SELECT first_name, email, department, salary,
+RANK() OVER(PARTITION BY department ORDER BY salary DESC)
+FROM employees
 
 
 
