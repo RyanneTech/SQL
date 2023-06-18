@@ -1,3 +1,20 @@
 # Ryanne Napoleon's SQL Portfolio
 
 Welcome! Within this repository, you will find a collection of SQL examples I have developed for personal projects and while studying SQL, machine learning, and other data analytics courses. I have highlighted a few projects below, including data visualizations created using Tableau. Feel free to explore and don't hesitate to contact me if you have any feedback or questions.
+
+-----
+# SQL
+
+Project | Description
+------------ | -------------
+[Fruit Imports](https://github.com/RyanneTech/SQL/blob/main/Fruit%20Imports) | Description 1
+[Department Store](https://github.com/RyanneTech/SQL/blob/main/Department%20Store)| Description 2
+
+-----
+
+# Tableau
+
+Project | Description
+------------ | -------------
+[Student Loans](https://public.tableau.com/app/profile/ryanne.napoleon/viz/StudentLoans_16867176149500/StudentLoans)| Description 1
+[2017 Leading Cause of Death](https://public.tableau.com/app/profile/ryanne.napoleon/viz/2017LeadingCauseofDeath/CauseofDeath) | Description 2
