@@ -1,6 +1,9 @@
+#For this project, I developed a table listing which subject each professor teaches along with their salaries. 
+#The queries below demonstrate the use of Boolean, Substring and Min/Max expressions.
+
+
 -- Create a Professors table
-CREATE TABLE professors 
-(
+CREATE TABLE professors (
 	last_name varchar(20),
 	department varchar(12),
 	salary integer,
@@ -29,4 +32,5 @@ FROM professors
 -- Display the highest and lowest salaries, excluding Professor Williams
 SELECT MAX(salary) highest_salary, MIN(salary) lowest_salary FROM professors
 WHERE last_name !='Williams'
+
 
