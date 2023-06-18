@@ -1,3 +1,7 @@
+#For this project, I created a table with a list of student’s names and their ages. 
+#The queries below demonstrate the use of LIKE and BETWEEN expressions. 
+
+
 -- Create a enrollment list 
 Create table students (student_no integer, student_name varchar(20), age integer);
 
