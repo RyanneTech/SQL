@@ -16,5 +16,5 @@ Project | Description
 
 Project | Description
 ------------ | -------------
-[Student Loans](https://public.tableau.com/app/profile/ryanne.napoleon/viz/StudentLoans_16867176149500/StudentLoans)| Description 1
+[Student Loans](https://public.tableau.com/app/profile/ryanne.napoleon/viz/StudentLoans_16867176149500/StudentLoans)| This dashboard aims to provide the audience with a comprehensive analysis of student loans in each state, focusing on the average student loans per recipient. By exploring the dashboard, users can gain contextual understanding and compare states to identify which one has the highest average student loans. Additionally, the dashboard offers options to view loan types, school types, and narrow down the analysis to specific regions.
 [2017 Leading Cause of Death](https://public.tableau.com/app/profile/ryanne.napoleon/viz/2017LeadingCauseofDeath/CauseofDeath) | Description 2
