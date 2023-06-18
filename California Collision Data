@@ -1,10 +1,9 @@
 #In this SQL, I'm querying a database from the California Highway Patrol that covers collisions from January 1st, 2001 until mid-December, 2020.
+#The queries below demonstrate the use of Joins and Group By expressions. 
 #Source: https://www.kaggle.com/datasets/alexgude/california-traffic-collision-data-from-switrs
 
 
--- Which days in 2009 had more than three bicyclists who complained of pain or sustained severe 
-   injuries after being involved in accidents during the periods of dusk or dawn?
-
+-- Which days in 2009 had more than three bicyclists who complained of pain or sustained severe injuries after being involved in accidents during the periods of dusk or dawn?
 SELECT collision_date, COUNT(victim_role) AS bicyclist FROM parties
 INNER JOIN victims ON parties.case_id = victims.case_id
 INNER JOIN collisions ON collisions.case_id = victims.case_id
@@ -18,7 +17,6 @@ ORDER BY collision_date ASC;
 
 
 -- What is the total number of collisions caused by individuals under the influence in Los Angeles County, categorized by gender? 
-
 SELECT party_sex, COUNT(alcohol_involved) AS alcohol_involved FROM collisions
 JOIN parties
 ON collisions.case_id = parties.case_id
@@ -28,7 +26,6 @@ GROUP BY party_sex
 
 
 -- How many fatal collisions occurred from speeding on the highway?
-
 SELECT COUNT(location_type) AS highway_collisions FROM collisions
 WHERE location_type IN ('highway')
 AND collision_severity IN ('fatal')
