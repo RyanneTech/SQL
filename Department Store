@@ -1,3 +1,7 @@
+#For this project, I created multiple tables based on every employee in the department store they work in.  
+#The queries below demonstrates the use of Substrings, Joins, Subqueries and Rank expressions.
+
+
 -- Create three tables with employee's information
 Create table departments (
     department varchar(100),
@@ -149,10 +153,6 @@ ORDER BY hire_date
 SELECT first_name, email, department, salary,
 RANK() OVER(PARTITION BY department ORDER BY salary DESC)
 FROM employees
-
-
-
-
 
 
 
