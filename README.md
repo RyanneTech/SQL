@@ -7,7 +7,7 @@ Welcome! Within this repository, you will find a collection of SQL examples I ha
 
 Project | Description
 ------------ | -------------
-[Fruit Imports](https://github.com/RyanneTech/SQL/blob/main/Fruit%20Imports) | Description 1
+[Fruit Imports](https://github.com/RyanneTech/SQL/blob/main/Fruit%20Imports) | In this project, I created my own data to analyze fruits that have been imported through the four seasons and some that were imported year round. I used the case expression to determine which fruits had either a full, sufficient or low supply. Additionally, I used the case expression to calculate the total cost for each season. 
 [Department Store](https://github.com/RyanneTech/SQL/blob/main/Department%20Store)| Description 2
 
 -----
