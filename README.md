@@ -7,8 +7,8 @@ Welcome! Within this repository, you will find a collection of SQL examples I ha
 
 Project | Description
 ------------ | -------------
-[Fruit Imports](https://github.com/RyanneTech/SQL/blob/main/Fruit%20Imports) | In this project, I created my own data to analyze fruits that have been imported through the four seasons and some that were imported year round. I used the case expression to determine which fruits had either a full, sufficient or low supply. Additionally, I used the case expression to calculate the total cost for each season. 
-[Department Store](https://github.com/RyanneTech/SQL/blob/main/Department%20Store)| In this project, I constructed multiple tables for each employee in the department store where they work. I utilized the substring expression to extract and display email domains. Furthermore, I used the union expression to identify the initial and final hires within the company. Additionally, I ranked employees in each department based on their salary.
+[Fruit Imports](https://github.com/RyanneTech/SQL/blob/main/Fruit%20Imports) | In this project, I analyzed imported fruits throughout the four seasons and year-round. Data was created to determine the fruit supply levels using the case expression. Additionally, the case expression was utilized to calculate the total cost for each season.
+[Department Store](https://github.com/RyanneTech/SQL/blob/main/Department%20Store)| In this project, I created multiple tables to display employee information alongside their corresponding department stores.  used the substring expression to extract the email domains of each employee. Additionally, the union expression helped identify the initial and final hires within the company. Furthermore, employees were ranked based on their salary in each department.
 
 -----
 
